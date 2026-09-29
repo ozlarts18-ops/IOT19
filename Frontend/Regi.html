@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Register | IOT19 Smart Environment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           REGISTER PAGE
+        ===================================================== */
+
+        .register-page {
+
+            min-height: calc(100vh - 110px);
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            background: #f4fbf6;
+        }
+
+
+        .register-image {
+
+            min-height: 700px;
+
+            background:
+                linear-gradient(
+                    rgba(3,55,32,0.62),
+                    rgba(3,55,32,0.82)
+                ),
+                url("Photos/field3.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 70px;
+        }
+
+
+        .register-image-content {
+
+            max-width: 500px;
+
+            color: white;
+        }
+
+
+        .register-image-content .small-title {
+
+            color: #a9f0c5;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .register-image-content h1 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(40px, 5vw, 65px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+
+        .register-image-content p {
+
+            color: rgba(255,255,255,0.78);
+
+            font-size: 16px;
+        }
+
+
+        .register-form-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 55px 30px;
+        }
+
+
+        .register-box {
+
+            width: 100%;
+
+            max-width: 560px;
+
+            background: white;
+
+            padding: 42px;
+
+            border-radius: 28px;
+
+            border: 1px solid #dcece2;
+
+            box-shadow:
+                0 25px 70px rgba(6,82,44,0.12);
+        }
+
+
+        .register-box h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: #10251b;
+
+            font-size: 34px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .register-subtitle {
+
+            color: #718178;
+
+            font-size: 14px;
+
+            margin-bottom: 28px;
+        }
+
+
+        /* MESSAGE */
+
+        #registerMessage {
+
+            display: none;
+
+            padding: 12px 14px;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        #registerMessage.success {
+
+            display: block;
+
+            background: #e8f8ee;
+
+            color: #087443;
+
+            border: 1px solid #bde8ce;
+        }
+
+
+        #registerMessage.error {
+
+            display: block;
+
+            background: #fff0f0;
+
+            color: #b42318;
+
+            border: 1px solid #f2c4c4;
+        }
+
+
+        .register-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 17px;
+        }
+
+
+        .register-group {
+
+            margin-bottom: 15px;
+        }
+
+
+        .register-group.full {
+
+            grid-column: 1 / -1;
+        }
+
+
+        .register-group label {
+
+            display: block;
+
+            color: #294236;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+        }
+
+
+        .register-group input,
+        .register-group select {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #d8e8de;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            background: #fbfefc;
+
+            color: #20382b;
+
+            font-family: inherit;
+
+            transition: 0.3s;
+
+            box-sizing: border-box;
+        }
+
+
+        .register-group input:focus,
+        .register-group select:focus {
+
+            border-color: #19a463;
+
+            background: white;
+
+            box-shadow:
+                0 0 0 4px rgba(25,164,99,0.09);
+        }
+
+
+        .terms {
+
+            display: flex;
+
+            gap: 9px;
+
+            align-items: flex-start;
+
+            margin: 8px 0 20px;
+
+            color: #718178;
+
+            font-size: 11px;
+        }
+
+
+        .terms input {
+
+            margin-top: 4px;
+
+            accent-color: #19a463;
+        }
+
+
+        .terms a {
+
+            color: #087443;
+
+            font-weight: 700;
+        }
+
+
+        .register-submit {
+
+            width: 100%;
+
+            border: none;
+
+            padding: 15px;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #19a463,
+                    #087443
+                );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 10px 25px rgba(12,130,71,0.2);
+        }
+
+
+        .register-submit:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 30px rgba(12,130,71,0.3);
+        }
+
+
+        .register-submit:disabled {
+
+            opacity: 0.7;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        .login-link {
+
+            text-align: center;
+
+            color: #718178;
+
+            font-size: 13px;
+
+            margin-top: 20px;
+        }
+
+
+        .login-link a {
+
+            color: #087443;
+
+            font-weight: 800;
+
+            text-decoration: none;
+        }
+
+
+        .login-link a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        @media(max-width: 850px) {
+
+            .register-page {
+
+                grid-template-columns: 1fr;
+            }
+
+            .register-image {
+
+                min-height: 380px;
+
+                padding: 50px 7%;
+            }
+
+            .register-form-area {
+
+                padding: 50px 6%;
+            }
+        }
+
+
+        @media(max-width: 550px) {
+
+            .register-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .register-group.full {
+
+                grid-column: auto;
+            }
+
+            .register-box {
+
+                padding: 30px 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ===================================================== -->
+
+    <div class="top-bar">
+
+        <span>
+            🌱 Smart Environment • IOT19 System
+        </span>
+
+        <span>
+            ✉ iot19@gmail.com
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <span>🌿</span>
+
+                <div>
+
+                    <strong>IOT19</strong>
+
+                    <small>
+                        Smart Environment
+                    </small>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="Aboutus.html">
+                ABOUT US
+            </a>
+
+            <a href="Monttech.html">
+                MONITORING
+            </a>
+
+            <a href="ContactUs.html">
+                CONTACT
+            </a>
+
+            <a href="dashacc.html">
+                DASHBOARD
+            </a>
+
+        </nav>
+
+
+        <div class="auth-buttons">
+
+            <a
+                class="login-btn"
+                href="Login.html"
+            >
+                LOGIN
+            </a>
+
+            <a
+                class="register-btn"
+                href="Regi.html"
+            >
+                REGISTER
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         REGISTER
+    ===================================================== -->
+
+    <main class="register-page">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="register-image">
+
+            <div class="register-image-content">
+
+                <div class="small-title">
+                    🌍 CONNECTED AGRICULTURE
+                </div>
+
+                <h1>
+                    Join the IOT19 Smart Agriculture Network.
+                </h1>
+
+                <p>
+                    Create your account and explore a connected
+                    agricultural environment powered by IoT,
+                    sensors, automation and AI.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="register-form-area">
+
+            <div class="register-box">
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p class="register-subtitle">
+                    Register to access the IOT19 Smart Environment System.
+                </p>
+
+
+                <!-- MESSAGE -->
+
+                <div id="registerMessage"></div>
+
+
+                <!-- REGISTER FORM -->
+
+                <form id="registerForm">
+
+
+                    <div class="register-grid">
+
+
+                        <!-- FIRST NAME -->
+
+                        <div class="register-group">
+
+                            <label for="firstName">
+                                FIRST NAME
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="First name"
+                                autocomplete="given-name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- LAST NAME -->
+
+                        <div class="register-group">
+
+                            <label for="lastName">
+                                LAST NAME
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Last name"
+                                autocomplete="family-name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="register-group full">
+
+                            <label for="email">
+                                EMAIL ADDRESS
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="iot19@gmail.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="register-group">
+
+                            <label for="phone">
+                                PHONE NUMBER
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+
+                        <!-- ROLE -->
+
+                        <div class="register-group">
+
+                            <label for="role">
+                                ROLE
+                            </label>
+
+                            <select id="role" required>
+
+                                <option value="">
+                                    Select role
+                                </option>
+
+                                <option value="Student">
+                                    Student
+                                </option>
+
+                                <option value="Team Member">
+                                    Team Member
+                                </option>
+
+                                <option value="Administrator">
+                                    Administrator
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="register-group">
+
+                            <label for="password">
+                                PASSWORD
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CONFIRM PASSWORD -->
+
+                        <div class="register-group">
+
+                            <label for="confirmPassword">
+                                CONFIRM PASSWORD
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- COLLEGE -->
+
+                        <div class="register-group full">
+
+                            <label for="college">
+                                COLLEGE / ORGANIZATION
+                            </label>
+
+                            <input
+                                type="text"
+                                id="college"
+                                placeholder="Enter college or organization"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+
+                            I agree to the
+
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+
+                            and understand that this account
+                            provides access to the IOT19 platform.
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="register-submit"
+                        id="registerButton"
+                    >
+                        CREATE IOT19 ACCOUNT →
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <p class="login-link">
+
+                    Already have an account?
+
+                    <a href="Login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         REGISTER JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+        const registerButton =
+            document.getElementById("registerButton");
+
+        const registerMessage =
+            document.getElementById("registerMessage");
+
+
+        /* ==========================================
+           SHOW MESSAGE
+        ========================================== */
+
+        function showMessage(message, type) {
+
+            registerMessage.textContent = message;
+
+            registerMessage.className = type;
+
+        }
+
+
+        /* ==========================================
+           REGISTER
+        ========================================== */
+
+        registerForm.addEventListener(
+            "submit",
+            async function(event) {
+
+                event.preventDefault();
+
+
+                /* ==============================
+                   GET FORM VALUES
+                ============================== */
+
+                const firstName =
+                    document.getElementById("firstName")
+                    .value
+                    .trim();
+
+
+                const lastName =
+                    document.getElementById("lastName")
+                    .value
+                    .trim();
+
+
+                const email =
+                    document.getElementById("email")
+                    .value
+                    .trim();
+
+
+                const phone =
+                    document.getElementById("phone")
+                    .value
+                    .trim();
+
+
+                const role =
+                    document.getElementById("role")
+                    .value;
+
+
+                const password =
+                    document.getElementById("password")
+                    .value;
+
+
+                const confirmPassword =
+                    document.getElementById("confirmPassword")
+                    .value;
+
+
+                const college =
+                    document.getElementById("college")
+                    .value
+                    .trim();
+
+
+                /* ==============================
+                   VALIDATION
+                ============================== */
+
+                if (!firstName || !lastName) {
+
+                    showMessage(
+                        "Please enter your first and last name.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!email) {
+
+                    showMessage(
+                        "Please enter your email address.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!role) {
+
+                    showMessage(
+                        "Please select your role.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (password.length < 6) {
+
+                    showMessage(
+                        "Password must contain at least 6 characters.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (password !== confirmPassword) {
+
+                    showMessage(
+                        "Passwords do not match.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                /* ==============================
+                   DISABLE BUTTON
+                ============================== */
+
+                registerButton.disabled = true;
+
+                registerButton.textContent =
+                    "CREATING ACCOUNT...";
+
+
+                try {
+
+
+                    /* ==============================
+                       SEND DATA TO BACKEND
+                    ============================== */
+
+                    const response =
+                        await fetch(
+                            "http://localhost:5000/api/auth/register",
+                            {
+
+                                method: "POST",
+
+                                headers: {
+
+                                    "Content-Type":
+                                        "application/json"
+
+                                },
+
+                                body: JSON.stringify({
+
+                                    name:
+                                        firstName +
+                                        " " +
+                                        lastName,
+
+                                    email:
+                                        email,
+
+                                    password:
+                                        password,
+
+                                    phone:
+                                        phone,
+
+                                    role:
+                                        role,
+
+                                    college:
+                                        college
+
+                                })
+
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    /* ==============================
+                       ERROR FROM BACKEND
+                    ============================== */
+
+                    if (!response.ok) {
+
+                        showMessage(
+                            data.message ||
+                            "Registration failed.",
+                            "error"
+                        );
+
+
+                        registerButton.disabled = false;
+
+                        registerButton.textContent =
+                            "CREATE IOT19 ACCOUNT →";
+
+                        return;
+
+                    }
+
+
+                    /* ==============================
+                       SUCCESS
+                    ============================== */
+
+                    showMessage(
+                        "Account created successfully! Redirecting to login...",
+                        "success"
+                    );
+
+
+                    registerButton.textContent =
+                        "ACCOUNT CREATED ✓";
+
+
+                    /* ==============================
+                       REDIRECT
+                    ============================== */
+
+                    setTimeout(
+                        function() {
+
+                            window.location.href =
+                                "Login.html";
+
+                        },
+                        1500
+                    );
+
+
+                } catch (error) {
+
+
+                    console.error(
+                        "Registration Error:",
+                        error
+                    );
+
+
+                    showMessage(
+                        "Cannot connect to the IOT19 server. Make sure the backend is running on port 5000.",
+                        "error"
+                    );
+
+
+                    registerButton.disabled = false;
+
+                    registerButton.textContent =
+                        "CREATE IOT19 ACCOUNT →";
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

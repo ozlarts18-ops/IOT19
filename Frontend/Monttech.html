@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoring Technology | IOT19</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           MONITORING TECHNOLOGY PAGE
+        ===================================================== */
+
+        .tech-hero {
+
+            min-height: 620px;
+
+            background:
+                linear-gradient(
+                    rgba(2, 45, 26, 0.68),
+                    rgba(2, 45, 26, 0.78)
+                ),
+                url("Photos/montechmain.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 90px 7%;
+
+            color: white;
+
+        }
+
+
+        .tech-hero-content {
+
+            max-width: 760px;
+
+        }
+
+
+        .tech-label {
+
+            display: inline-block;
+
+            color: #a9f0c5;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .tech-hero h1 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(48px, 7vw, 88px);
+
+            line-height: 0.95;
+
+            margin: 0 0 25px;
+
+        }
+
+
+        .tech-hero h2 {
+
+            font-size: clamp(24px, 3vw, 38px);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .tech-hero p {
+
+            max-width: 650px;
+
+            color: rgba(255,255,255,0.82);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .tech-buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+            margin-top: 30px;
+
+        }
+
+
+        .tech-btn {
+
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            border-radius: 10px;
+
+            background: #19a463;
+
+            color: white;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .tech-btn:hover {
+
+            transform: translateY(-3px);
+
+            background: #0b8449;
+
+        }
+
+
+        .tech-btn-outline {
+
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(255,255,255,0.5);
+
+            color: white;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .tech-btn-outline:hover {
+
+            background: white;
+
+            color: #087443;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .tech-intro {
+
+            padding: 100px 7%;
+
+            background: #ffffff;
+
+            text-align: center;
+
+        }
+
+
+        .tech-intro-inner {
+
+            max-width: 850px;
+
+            margin: auto;
+
+        }
+
+
+        .tech-intro h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: #10251b;
+
+            font-size: clamp(32px, 4vw, 50px);
+
+            margin: 15px 0 20px;
+
+        }
+
+
+        .tech-intro p {
+
+            color: #718178;
+
+            line-height: 1.8;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY CARDS
+        ===================================================== */
+
+        .technology-section {
+
+            padding: 100px 7%;
+
+            background: #f4fbf6;
+
+        }
+
+
+        .technology-header {
+
+            max-width: 750px;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .technology-header h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: #10251b;
+
+            font-size: clamp(34px, 4vw, 55px);
+
+            margin: 15px 0;
+
+        }
+
+
+        .technology-header p {
+
+            color: #718178;
+
+            line-height: 1.7;
+
+        }
+
+
+        .technology-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 28px;
+
+        }
+
+
+        .technology-card {
+
+            background: white;
+
+            border: 1px solid #dcece2;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(7,78,44,0.07);
+
+            transition: 0.35s;
+
+        }
+
+
+        .technology-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 55px rgba(7,78,44,0.13);
+
+        }
+
+
+        .technology-card img {
+
+            width: 100%;
+
+            height: 270px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        .technology-content {
+
+            padding: 30px;
+
+        }
+
+
+        .technology-number {
+
+            color: #19a463;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .technology-content h3 {
+
+            font-family: "Manrope", sans-serif;
+
+            color: #10251b;
+
+            font-size: 25px;
+
+            margin: 12px 0;
+
+        }
+
+
+        .technology-content p {
+
+            color: #718178;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+        }
+
+
+        .technology-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 20px 0 0;
+
+        }
+
+
+        .technology-list li {
+
+            color: #426052;
+
+            font-size: 13px;
+
+            padding: 8px 0;
+
+            border-bottom: 1px solid #edf3ef;
+
+        }
+
+
+        .technology-list li::before {
+
+            content: "✓";
+
+            color: #19a463;
+
+            font-weight: bold;
+
+            margin-right: 9px;
+
+        }
+
+
+        /* =====================================================
+           SYSTEM FLOW
+        ===================================================== */
+
+        .flow-section {
+
+            padding: 100px 7%;
+
+            background: #ffffff;
+
+        }
+
+
+        .flow-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+
+        .flow-header {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .flow-header h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(32px, 4vw, 50px);
+
+            color: #10251b;
+
+            margin: 15px 0;
+
+        }
+
+
+        .flow-header p {
+
+            color: #718178;
+
+        }
+
+
+        .flow-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .flow-card {
+
+            position: relative;
+
+            padding: 30px 22px;
+
+            background: #f4fbf6;
+
+            border: 1px solid #dcece2;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+        }
+
+
+        .flow-icon {
+
+            width: 65px;
+
+            height: 65px;
+
+            margin: 0 auto 18px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 18px;
+
+            background: #e2f7ea;
+
+            font-size: 28px;
+
+        }
+
+
+        .flow-card h3 {
+
+            color: #10251b;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .flow-card p {
+
+            color: #718178;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           SENSOR IMAGE SECTION
+        ===================================================== */
+
+        .visual-section {
+
+            padding: 100px 7%;
+
+            background: #f4fbf6;
+
+        }
+
+
+        .visual-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+
+            gap: 20px;
+
+        }
+
+
+        .visual-card {
+
+            height: 350px;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            border: 1px solid #dcece2;
+
+        }
+
+
+        .visual-card img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+
+        }
+
+
+        .visual-card:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+
+        .visual-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,40,22,0.85)
+                );
+
+            color: white;
+
+        }
+
+
+        .visual-overlay h3 {
+
+            margin: 0;
+
+            font-size: 21px;
+
+        }
+
+
+        /* =====================================================
+           DASHBOARD CTA
+        ===================================================== */
+
+        .tech-cta {
+
+            padding: 110px 7%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #063c25,
+                    #087443
+                );
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .tech-cta h2 {
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(34px, 5vw, 60px);
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .tech-cta p {
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            color: rgba(255,255,255,0.75);
+
+            line-height: 1.7;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-block;
+
+            background: white;
+
+            color: #087443;
+
+            padding: 15px 28px;
+
+            border-radius: 10px;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .cta-button:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.2);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .technology-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .flow-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .visual-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .tech-hero {
+
+                min-height: 550px;
+
+                padding: 70px 6%;
+
+            }
+
+
+            .flow-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .visual-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .technology-card img {
+
+                height: 220px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <span>
+        🌱 Smart Environment • IOT19 System
+    </span>
+
+    <span>
+        ✉ iot19@gmail.com
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <span>🌿</span>
+
+            <div>
+
+                <strong>IOT19</strong>
+
+                <small>
+                    Smart Environment
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="Aboutus.html">
+            ABOUT US
+        </a>
+
+        <a class="active"
+           href="Monttech.html">
+            MONITORING
+        </a>
+
+        <a href="ContactUs.html">
+            CONTACT
+        </a>
+
+        <a href="dashacc.html">
+            DASHBOARD
+        </a>
+
+    </nav>
+
+
+    <div class="auth-buttons">
+
+        <a class="login-btn"
+           href="Login.html">
+            LOGIN
+        </a>
+
+        <a class="register-btn"
+           href="Regi.html">
+            REGISTER
+        </a>
+
+    </div>
+
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="tech-hero">
+
+
+    <div class="tech-hero-content">
+
+
+        <span class="tech-label">
+            🌱 IOT • AI • SMART AGRICULTURE
+        </span>
+
+
+        <h1>
+            Monitoring<br>
+            Technology
+        </h1>
+
+
+        <h2>
+            From Sensors to Smart Decisions.
+        </h2>
+
+
+        <p>
+
+            IOT19 combines sensors, IoT connectivity,
+            automation, image analysis and artificial
+            intelligence to monitor agricultural
+            environments and support smarter decisions.
+
+        </p>
+
+
+        <div class="tech-buttons">
+
+            <a
+                class="tech-btn"
+                href="dashacc.html"
+            >
+                Open Dashboard →
+            </a>
+
+
+            <a
+                class="tech-btn-outline"
+                href="Aboutus.html"
+            >
+                About IOT19
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="tech-intro">
+
+
+    <div class="tech-intro-inner">
+
+
+        <span class="section-label">
+            OUR TECHNOLOGY
+        </span>
+
+
+        <h2>
+            Intelligent Monitoring for Modern Agriculture
+        </h2>
+
+
+        <p>
+
+            The IOT19 Smart Environment System monitors
+            important environmental and agricultural
+            parameters using connected sensors and
+            intelligent technologies.
+
+            The collected information can be used to
+            understand field conditions, improve
+            resource management and support agricultural
+            analysis.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     TECHNOLOGY MODULES
+===================================================== -->
+
+<section class="technology-section">
+
+
+    <div class="technology-header">
+
+        <span class="section-label">
+            MONITORING MODULES
+        </span>
+
+
+        <h2>
+            Seven Technologies Working Together
+        </h2>
+
+
+        <p>
+
+            Each module focuses on an important part of
+            the agricultural environment.
+
+        </p>
+
+    </div>
+
+
+    <div class="technology-grid">
+
+
+        <!-- 01 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/Sensors1.jpg"
+                alt="Soil moisture sensors"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    01 • IRRIGATION
+                </span>
+
+
+                <h3>
+                    Soil Moisture Monitoring
+                </h3>
+
+
+                <p>
+
+                    Soil moisture sensors monitor the amount
+                    of moisture available in the soil.
+
+                    The information can support automatic
+                    irrigation according to crop requirements.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Soil moisture measurement
+                    </li>
+
+                    <li>
+                        Irrigation monitoring
+                    </li>
+
+                    <li>
+                        Water conservation
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/WtaerTank.jpg"
+                alt="Water storage tank"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    02 • WATER MANAGEMENT
+                </span>
+
+
+                <h3>
+                    Water Level Monitoring
+                </h3>
+
+
+                <p>
+
+                    The water level module monitors water
+                    available in storage tanks and helps
+                    maintain proper water availability.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Tank level monitoring
+                    </li>
+
+                    <li>
+                        Water availability
+                    </li>
+
+                    <li>
+                        Irrigation support
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/Lighttube.jpg"
+                alt="Light intensity monitoring"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    03 • ENVIRONMENT
+                </span>
+
+
+                <h3>
+                    Light Intensity Monitoring
+                </h3>
+
+
+                <p>
+
+                    Light intensity measurements help analyze
+                    the lighting conditions available in the
+                    agricultural environment.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Light measurement
+                    </li>
+
+                    <li>
+                        Environmental analysis
+                    </li>
+
+                    <li>
+                        Crop growth support
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/crop1.jpg"
+                alt="Crop monitoring"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    04 • CROP ANALYSIS
+                </span>
+
+
+                <h3>
+                    Crop Growth Monitoring
+                </h3>
+
+
+                <p>
+
+                    Image-based observation can be used to
+                    monitor crop development and field
+                    conditions.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Crop image analysis
+                    </li>
+
+                    <li>
+                        Growth observation
+                    </li>
+
+                    <li>
+                        Field monitoring
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/Leaf1.jpg"
+                alt="Plant environment"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    05 • CLIMATE
+                </span>
+
+
+                <h3>
+                    Temperature & Humidity
+                </h3>
+
+
+                <p>
+
+                    Temperature and humidity monitoring
+                    provides information about environmental
+                    conditions affecting plant growth.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Temperature monitoring
+                    </li>
+
+                    <li>
+                        Humidity monitoring
+                    </li>
+
+                    <li>
+                        Environmental analysis
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 06 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/Leaf5.jpg"
+                alt="Pest detection"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    06 • AI DETECTION
+                </span>
+
+
+                <h3>
+                    Pest Detection (YOLO11s • best (1).pt)
+                </h3>
+
+                <p>
+                    Deep learning object detection leveraging Ultralytics YOLO11s trained weights (<strong>best (1).pt</strong>) to classify 102 distinct species of agricultural insect pests, identify infestation hotspots, and estimate damage severity.
+                </p>
+
+                <ul class="technology-list">
+
+                    <li>
+                        Model Checkpoint: <strong>best (1).pt</strong> (YOLO11s)
+                    </li>
+
+                    <li>
+                        102 Class Agricultural Taxonomy
+                    </li>
+
+                    <li>
+                        Real-time Inference (< 300ms) with FastAPI Microservice
+                    </li>
+
+                    <li>
+                        896×896 Resolution with Bounding Box Localization
+                    </li>
+
+                </ul>
+
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
+                    <a href="dashboard.html#pest-detection-section" style="display: inline-flex; align-items: center; gap: 6px; background: #166534; color: #ffffff; text-decoration: none; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                        🐛 Test best (1).pt (YOLO11s)
+                    </a>
+                    <a href="dashboard.html#crop-health-section" style="display: inline-flex; align-items: center; gap: 6px; background: #15803d; color: #ffffff; text-decoration: none; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                        🌿 Test plant_disease_model.pt (ResNet-18)
+                    </a>
+                </div>
+
+                <div style="margin-top: 14px; padding: 12px; background: #f0fdf4; border-radius: 8px; border: 1px solid #bbf7d0;">
+                    <strong style="color: #166534; font-size: 13px;">🌿 Plant Disease Diagnosis Integration:</strong>
+                    <p style="margin: 4px 0 0; font-size: 12px; color: #14532d;">
+                        Paired with <strong>plant_disease_model.pt</strong> (PyTorch ResNet-18 architecture) trained across 38 PlantVillage disease classes to evaluate foliage health and deliver automated treatment remedies.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+        <!-- 07 -->
+
+        <article class="technology-card">
+
+
+            <img
+                src="Photos/Raspberrypi2.jpg"
+                alt="IoT Raspberry Pi"
+            >
+
+
+            <div class="technology-content">
+
+
+                <span class="technology-number">
+                    07 • WEB PLATFORM
+                </span>
+
+
+                <h3>
+                    IoT Control & Web Platform
+                </h3>
+
+
+                <p>
+
+                    The web platform brings monitoring
+                    information together in one centralized
+                    interface.
+
+                </p>
+
+
+                <ul class="technology-list">
+
+                    <li>
+                        Centralized monitoring
+                    </li>
+
+                    <li>
+                        IoT connectivity
+                    </li>
+
+                    <li>
+                        Dashboard interface
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SYSTEM FLOW
+===================================================== -->
+
+<section class="flow-section">
+
+
+    <div class="flow-container">
+
+
+        <div class="flow-header">
+
+            <span class="section-label">
+                HOW IOT19 WORKS
+            </span>
+
+
+            <h2>
+                From Field to Dashboard
+            </h2>
+
+
+            <p>
+                A connected flow for collecting,
+                processing and presenting agricultural data.
+            </p>
+
+        </div>
+
+
+        <div class="flow-grid">
+
+
+            <div class="flow-card">
+
+                <div class="flow-icon">
+                    📡
+                </div>
+
+                <h3>
+                    01. Sensors
+                </h3>
+
+                <p>
+                    Sensors collect environmental and
+                    agricultural information.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-icon">
+                    🍓
+                </div>
+
+                <h3>
+                    02. Raspberry Pi
+                </h3>
+
+                <p>
+                    Connected hardware receives and
+                    processes sensor information.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    03. AI & Analysis
+                </h3>
+
+                <p>
+                    Intelligent analysis can help interpret
+                    collected information.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-icon">
+                    📊
+                </div>
+
+                <h3>
+                    04. Dashboard
+                </h3>
+
+                <p>
+                    Information is presented through the
+                    centralized IOT19 platform.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     VISUAL TECHNOLOGY
+===================================================== -->
+
+<section class="visual-section">
+
+
+    <div class="technology-header">
+
+        <span class="section-label">
+            IOT19 IN ACTION
+        </span>
+
+        <h2>
+            Smart Agriculture Technology
+        </h2>
+
+        <p>
+            Connected hardware and agricultural
+            monitoring technologies form the foundation
+            of the IOT19 system.
+        </p>
+
+    </div>
+
+
+    <div class="visual-grid">
+
+
+        <div class="visual-card">
+
+            <img
+                src="Photos/Sensor2.jpg"
+                alt="IoT sensors"
+            >
+
+            <div class="visual-overlay">
+
+                <h3>
+                    Connected Sensors
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="visual-card">
+
+            <img
+                src="Photos/WaterPump.jpg"
+                alt="Water pump"
+            >
+
+            <div class="visual-overlay">
+
+                <h3>
+                    Smart Irrigation
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="visual-card">
+
+            <img
+                src="Photos/crop2.jpg"
+                alt="Crop monitoring"
+            >
+
+            <div class="visual-overlay">
+
+                <h3>
+                    Crop Monitoring
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="tech-cta">
+
+
+    <h2>
+        Monitor Your Environment Intelligently.
+    </h2>
+
+
+    <p>
+
+        Explore the IOT19 dashboard to view monitoring
+        information and connect the different components
+        of the Smart Environment System.
+
+    </p>
+
+
+    <a
+        class="cta-button"
+        href="dashacc.html"
+    >
+        Open IOT19 Dashboard →
+    </a>
+
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+
+            <div class="footer-logo">
+                🌿 IOT19
+            </div>
+
+
+            <h3>
+                Smart Environment System
+            </h3>
+
+
+            <p>
+                IoT • AI • Smart Agriculture
+            </p>
+
+
+            <p>
+                Email:
+                <a href="mailto:iot19@gmail.com">
+                    iot19@gmail.com
+                </a>
+            </p>
+
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <h3>
+                QUICK LINKS
+            </h3>
+
+
+            <a href="index.html">
+                HOME
+            </a>
+
+
+            <a href="Aboutus.html">
+                ABOUT US
+            </a>
+
+
+            <a href="Monttech.html">
+                MONITORING
+            </a>
+
+
+            <a href="ContactUs.html">
+                CONTACT
+            </a>
+
+
+            <a href="dashacc.html">
+                DASHBOARD
+            </a>
+
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <h3>
+                ACCOUNT
+            </h3>
+
+
+            <a href="Login.html">
+                LOGIN
+            </a>
+
+
+            <a href="Regi.html">
+                REGISTER
+            </a>
+
+
+        </div>
+
+
+        <div class="footer-social">
+
+
+            <h3>
+                FOLLOW US
+            </h3>
+
+
+            <div class="social-icons">
+
+                <a href="#">
+                    f
+                </a>
+
+                <a href="#">
+                    in
+                </a>
+
+                <a href="#">
+                    𝕏
+                </a>
+
+                <a href="#">
+                    ◎
+                </a>
+
+            </div>
+
+
+            <p>
+                Smart technology for a better
+                agricultural future.
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 IOT19 Smart Environment System.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

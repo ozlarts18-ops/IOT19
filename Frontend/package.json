@@ -1,0 +1,12 @@
+{
+  "name": "iot19-frontend",
+  "version": "1.0.0",
+  "description": "IOT19 Smart Environment Frontend Application",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | IOT19 Smart Environment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOGGED-IN TOP BAR
+===================================================== -->
+
+<div class="user-topbar">
+
+    <div class="user-topbar-left">
+
+        <span>🌱</span>
+
+        <span>IOT19 Smart Environment</span>
+
+    </div>
+
+
+    <div class="user-topbar-right">
+
+        <span>
+            Hi, <strong id="topUserName">User</strong>
+        </span>
+
+        <button
+            class="logout-btn"
+            id="logoutBtn">
+
+            LOGOUT
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <span>🌿</span>
+
+            <div>
+
+                <strong>IOT19</strong>
+
+                <small>
+                    Smart Environment
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="Aboutus.html">
+            ABOUT US
+        </a>
+
+        <a href="Monttech.html">
+            MONITORING TECH
+        </a>
+
+        <a href="ContactUs.html">
+            CONTACT US
+        </a>
+
+        <a
+            class="active"
+            href="dashacc.html">
+
+            DASHBOARD
+
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     DASHBOARD HERO
+===================================================== -->
+
+<section class="dashboard-hero">
+
+
+    <div class="dashboard-hero-content">
+
+
+        <div class="dashboard-label">
+
+            🌱 STUDENT • IOT19 SMART ENVIRONMENT
+
+        </div>
+
+
+        <h1>
+
+            Welcome back,
+
+            <span id="heroUserName">
+                User
+            </span>
+
+            👋
+
+        </h1>
+
+
+        <p>
+
+            Smart Environment & Agriculture
+            Monitoring System
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN DASHBOARD
+===================================================== -->
+
+<main class="dashboard-container">
+
+
+
+    <!-- =================================================
+         WELCOME CARD
+    ================================================== -->
+
+    <section class="dashboard-welcome">
+
+
+        <div class="dashboard-welcome-content">
+
+
+            <small>
+                IOT19 SYSTEM
+            </small>
+
+
+            <h2>
+                Welcome to Your Dashboard
+            </h2>
+
+
+            <p>
+
+                You are successfully logged in to
+                the IOT19 Smart Environment System.
+                Monitor smart agriculture technologies,
+                environmental information and connected
+                IoT systems from one place.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         USER INFORMATION
+    ================================================== -->
+
+    <section class="user-info">
+
+
+        <!-- NAME -->
+
+        <div class="user-info-card">
+
+
+            <div class="user-info-icon">
+
+                👤
+
+            </div>
+
+
+            <div class="user-info-text">
+
+                <span>
+                    NAME
+                </span>
+
+                <strong id="userName">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- EMAIL -->
+
+        <div class="user-info-card">
+
+
+            <div class="user-info-icon">
+
+                ✉️
+
+            </div>
+
+
+            <div class="user-info-text">
+
+                <span>
+                    EMAIL
+                </span>
+
+                <strong id="userEmail">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ROLE -->
+
+        <div class="user-info-card">
+
+
+            <div class="user-info-icon">
+
+                🎓
+
+            </div>
+
+
+            <div class="user-info-text">
+
+                <span>
+                    ROLE
+                </span>
+
+                <strong id="userRole">
+                    Student
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         DASHBOARD ACTIONS
+    ================================================== -->
+
+    <section class="dashboard-actions">
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-action-btn primary">
+
+            📊 OPEN LIVE DASHBOARD →
+
+        </a>
+
+
+        <a
+            href="Monttech.html"
+            class="dashboard-action-btn secondary">
+
+            ⚙ VIEW MONITORING TECHNOLOGIES
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MONITORING SECTION
+    ================================================== -->
+
+    <section class="dashboard-content-section">
+
+
+        <div class="dashboard-section-heading">
+
+            <span>
+                IOT19 PLATFORM
+            </span>
+
+            <h2>
+                Smart Environment Overview
+            </h2>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MONITORING CARDS
+        ================================================== -->
+
+        <div class="monitoring-grid">
+
+
+            <!-- SOIL -->
+
+            <div class="monitoring-card">
+
+
+                <div class="monitoring-card-top">
+
+                    <div class="monitoring-icon">
+                        🌱
+                    </div>
+
+                    <div class="online-dot"></div>
+
+                </div>
+
+
+                <h3>
+                    IoT
+                </h3>
+
+                <p>
+                    Connected Agriculture
+                </p>
+
+
+            </div>
+
+
+
+            <!-- WATER -->
+
+            <div class="monitoring-card">
+
+
+                <div class="monitoring-card-top">
+
+                    <div class="monitoring-icon">
+                        💧
+                    </div>
+
+                    <div class="online-dot"></div>
+
+                </div>
+
+
+                <h3>
+                    Water
+                </h3>
+
+                <p>
+                    Water Level Monitoring
+                </p>
+
+
+            </div>
+
+
+
+            <!-- AI -->
+
+            <div class="monitoring-card">
+
+
+                <div class="monitoring-card-top">
+
+                    <div class="monitoring-icon">
+                        🤖
+                    </div>
+
+                    <div class="online-dot"></div>
+
+                </div>
+
+
+                <h3>
+                    AI
+                </h3>
+
+                <p>
+                    Intelligent Detection
+                </p>
+
+
+            </div>
+
+
+
+            <!-- AUTOMATION -->
+
+            <div class="monitoring-card">
+
+
+                <div class="monitoring-card-top">
+
+                    <div class="monitoring-icon">
+                        ⚙️
+                    </div>
+
+                    <div class="online-dot"></div>
+
+                </div>
+
+
+                <h3>
+                    Auto
+                </h3>
+
+                <p>
+                    Smart Automation
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK ACCESS
+        ================================================== -->
+
+        <div class="dashboard-section-heading">
+
+            <span>
+                QUICK ACCESS
+            </span>
+
+            <h2>
+                Explore IOT19
+            </h2>
+
+        </div>
+
+
+
+        <div class="quick-access">
+
+
+            <!-- MONITORING -->
+
+            <div class="quick-card">
+
+
+                <div class="quick-card-icon">
+                    📡
+                </div>
+
+
+                <h3>
+                    Monitoring Technologies
+                </h3>
+
+
+                <p>
+
+                    Explore IoT sensors,
+                    environmental monitoring
+                    and smart agriculture technologies.
+
+                </p>
+
+
+                <a href="Monttech.html">
+
+                    EXPLORE TECHNOLOGIES →
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- LIVE DASHBOARD -->
+
+            <div class="quick-card">
+
+
+                <div class="quick-card-icon">
+                    📊
+                </div>
+
+
+                <h3>
+                    Live Dashboard
+                </h3>
+
+
+                <p>
+
+                    View real-time agricultural
+                    and environmental monitoring
+                    information.
+
+                </p>
+
+
+                <a href="dashboard.html">
+
+                    OPEN LIVE DASHBOARD →
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ABOUT -->
+
+            <div class="quick-card">
+
+
+                <div class="quick-card-icon">
+                    🌍
+                </div>
+
+
+                <h3>
+                    About IOT19
+                </h3>
+
+
+                <p>
+
+                    Learn about our team,
+                    project modules and
+                    smart agriculture vision.
+
+                </p>
+
+
+                <a href="Aboutus.html">
+
+                    LEARN MORE →
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="dashboard-footer">
+
+
+    <div class="dashboard-footer-inner">
+
+
+        <!-- BRAND -->
+
+        <div>
+
+            <h3>
+                🌿 IOT19
+            </h3>
+
+            <p>
+                Smart Environment System
+            </p>
+
+            <p>
+                IoT • AI • Smart Agriculture
+            </p>
+
+            <p style="margin-top:10px;">
+                Email:
+                iot19@gmail.com
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                QUICK LINKS
+            </h3>
+
+
+            <div class="dashboard-footer-links">
+
+                <a href="index.html">
+                    HOME
+                </a>
+
+                <a href="Aboutus.html">
+                    ABOUT US
+                </a>
+
+                <a href="Monttech.html">
+                    MONITORING
+                </a>
+
+                <a href="ContactUs.html">
+                    CONTACT
+                </a>
+
+                <a href="dashboard.html">
+                    LIVE DASHBOARD
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ACCOUNT -->
+
+        <div>
+
+            <h3>
+                ACCOUNT
+            </h3>
+
+
+            <div class="dashboard-footer-links">
+
+                <a href="dashacc.html">
+                    MY DASHBOARD
+                </a>
+
+                <a href="Login.html">
+                    LOGIN
+                </a>
+
+                <a href="Regi.html">
+                    REGISTER
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div>
+
+            <h3>
+                IOT19 SYSTEM
+            </h3>
+
+            <p>
+
+                Smart technology for
+                a better and more
+                sustainable agricultural future.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="dashboard-footer-bottom">
+
+        © 2026 IOT19 Smart Environment System.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     LOGIN USER DATA
+===================================================== -->
+
+<script>
+
+    /*
+       ================================================
+       GET LOGGED-IN USER
+       ================================================
+    */
+
+    const userData =
+        localStorage.getItem("user");
+
+
+    /*
+       ================================================
+       CHECK LOGIN
+       ================================================
+    */
+
+    if (!userData) {
+
+        window.location.href = "Login.html";
+
+    }
+
+
+    /*
+       ================================================
+       DISPLAY USER INFORMATION
+       ================================================
+    */
+
+    try {
+
+        const user = JSON.parse(userData);
+
+
+        const name =
+            user.name ||
+            user.username ||
+            "User";
+
+
+        const email =
+            user.email ||
+            "Not available";
+
+
+        const role =
+            user.role ||
+            "Student";
+
+
+        document.getElementById(
+            "topUserName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "heroUserName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "userName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "userEmail"
+        ).textContent = email;
+
+
+        document.getElementById(
+            "userRole"
+        ).textContent = role;
+
+
+    } catch (error) {
+
+        console.error(
+            "User data error:",
+            error
+        );
+
+        localStorage.removeItem("user");
+
+        window.location.href =
+            "Login.html";
+
+    }
+
+
+
+    /*
+       ================================================
+       LOGOUT
+       ================================================
+    */
+
+    document
+        .getElementById("logoutBtn")
+        .addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem("user");
+
+                localStorage.removeItem("token");
+
+                window.location.href =
+                    "Login.html";
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>
